@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Gcard from "./GCard";
 import "./GiftCards.css";
+import { nanoid } from "nanoid";
 
 // const giftCards = [
 //   {
@@ -457,7 +458,7 @@ function GiftCards() {
       </div>
       <div className="f-row">
         {newGiftCardsArray.map((giftcd) => {
-          return <Gcard gtcard={giftcd.gift}></Gcard>;
+          return <Gcard key={nanoid()} gtcard={giftcd.gift}></Gcard>;
         })}
       </div>
     </div>

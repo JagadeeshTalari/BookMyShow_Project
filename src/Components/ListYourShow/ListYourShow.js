@@ -1,5 +1,6 @@
 import React from "react";
 import "./ListYourShow.css";
+import { nanoid } from "nanoid";
 
 const YourShowHead = {
   Showlist: [
@@ -89,7 +90,7 @@ export default function ListYourShow() {
         <div className="allcards">
           {YourShowHead.Showlist.map((x) => {
             return (
-              <div className="showcards">
+              <div className="showcards" key={nanoid()}>
                 <div>
                   <img src={x.icon} alt="" />
                   <h3>{x.title}</h3>
@@ -111,7 +112,7 @@ export default function ListYourShow() {
         <div className="allcards">
           {YourShowHead.Showlist2.map((x) => {
             return (
-              <div className="showcards2">
+              <div className="showcards2" key={nanoid()}>
                 <div>
                   <img src={x.icon} alt="" />
                   <h3>{x.title}</h3>

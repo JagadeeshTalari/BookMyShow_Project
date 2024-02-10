@@ -6,10 +6,11 @@ import {
   AccordionBody,
 } from "reactstrap";
 import { useState } from "react";
+import { nanoid } from "nanoid";
 
 const array1 = [
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyIFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00364885-nekjbbgudc-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyIFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00364885-nekjbbgudc-portrait.jpg",
     name: "Thinking Out Loud By Manoj Prabakar",
     languages: "English",
     catagory: "Comedy | English | 12yrs + | 1hr 30mins",
@@ -17,7 +18,7 @@ const array1 = [
     price: 399,
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAyNiBOb3Y%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00366777-axsacwyste-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAyNiBOb3Y%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00366777-axsacwyste-portrait.jpg",
     name: "Sunburn Arena Ft. Dimitri Vegas &Like Mike-Chennai",
     languages: "English",
     catagory: "Comedy | English | 12yrs + | 1hr 30mins",
@@ -25,7 +26,7 @@ const array1 = [
     filter: "outdoorevents",
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyIFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00365986-flzaeetwlm-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyIFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00365986-flzaeetwlm-portrait.jpg",
     name: "Barkha Ritu-Musical Celebration with the Maestro",
     languages: "English",
     catagory: "Comedy | English | 12yrs + | 1hr 30mins",
@@ -33,7 +34,7 @@ const array1 = [
     filter: "outdoorevents",
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCA2IE9jdA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00355125-jjrdfxrung-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCA2IE9jdA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00355125-jjrdfxrung-portrait.jpg",
     name: "Kisi Ko Batana Mat Ft. Anubhav Singh Bassi",
     languages: "Hindi",
     type: "music shows",
@@ -42,7 +43,7 @@ const array1 = [
     filter: "outdoorevents",
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCA5IFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00348301-vhfvztjwde-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCA5IFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00348301-vhfvztjwde-portrait.jpg",
     name: "Ramkumar Paathi Annachi Meethi",
     type: "music shows",
     languages: "Tamil",
@@ -51,7 +52,7 @@ const array1 = [
     price: 499,
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAxIFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00307978-gbstylvesw-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAxIFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00307978-gbstylvesw-portrait.jpg",
     name: "Smartphone Photography - Unleash the Pro Mode",
     languages: "Telugu",
     type: "workshop",
@@ -59,7 +60,7 @@ const array1 = [
     price: 2500,
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-TW9uLCAyIE9jdA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00365862-gpygtnwxjl-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-TW9uLCAyIE9jdA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00365862-gpygtnwxjl-portrait.jpg",
     name: "Faith Over Fear - Live Concert",
     languages: "Telugu",
     type: "music shows",
@@ -68,7 +69,7 @@ const array1 = [
     price: 299,
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAxMCBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00361122-uzsfngkhrc-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAxMCBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00361122-uzsfngkhrc-portrait.jpg",
     name: "MARAKKUMA NENJAM AR Rahman Live Concert in Chennai",
     languages: "Tamil",
     catagory: "Concerts",
@@ -77,14 +78,14 @@ const array1 = [
     filter: "outdoorevents",
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAxNyBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00351918-wfyafagjfj-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAxNyBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00351918-wfyafagjfj-portrait.jpg",
     name: "Jagane Thandhiram - Tamil Standup Comedy",
     languages: "Tamil",
     catagory: "Comedy | Tamil | 12yrs + | 1hr 30mins",
     location: "Madai-Chennai",
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyNSBOb3Y%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00365092-rnznqnzwpr-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyNSBOb3Y%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00365092-rnznqnzwpr-portrait.jpg",
     name: "MindFool India Tour - Vir Das",
     languages: "Hindi",
     catagory: "Comedy | English | 12yrs + | 1hr 30mins",
@@ -92,28 +93,28 @@ const array1 = [
     filter: "fastfilling",
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyNSBOb3Y%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00358075-rzkwxkshvk-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyNSBOb3Y%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00358075-rzkwxkshvk-portrait.jpg",
     name: "Praveen Kumar - Family Man Return",
     languages: "Tamil",
     catagory: "Comedy | Tamil | 12yrs + | 1hr 30mins",
     location: "Madai-Chennai",
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCA4IFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00329668-hxpuzsejvt-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCA4IFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00329668-hxpuzsejvt-portrait.jpg",
     name: "AANSPLAINING by Karthik Kumar - TOUR 2023",
     languages: "Tamil",
     catagory: "Comedy | Tamil | 12yrs + | 1hr 30mins",
     filter: "fastfilling",
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyMyBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00365053-ukqgdnpsth-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyMyBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00365053-ukqgdnpsth-portrait.jpg",
     name: "Nothing Makes Sense FT. VARUN GROVER",
     catagory: "Comedy | English, Hindi | 16yrs + | 1hr 20mins",
     languages: "Hindi",
     filter: "fastfilling",
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAxIFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00367009-mcgkcabczp-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAxIFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00367009-mcgkcabczp-portrait.jpg",
     name: "WeMET Speed Dating",
     languages: "Hindi",
     type: "online streaming events",
@@ -121,40 +122,40 @@ const array1 = [
     price: 49,
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCA5IFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00324554-cmyfpecske-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCA5IFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00324554-cmyfpecske-portrait.jpg",
     languages: "English",
     name: "FRIENDS by Rajasekhar Mammidana - Standup Comedy",
     catagory: "Comedy | English | 16yrs + | 1hr 10mins",
     price: 399,
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyIFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00365986-flzaeetwlm-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAyIFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00365986-flzaeetwlm-portrait.jpg",
     name: "Sunburn Arena Ft. Dimitri Vegas &Like Mike-Chennai",
     languages: "English",
     catagory: "EDM | English | 6hrs",
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAyMiBTZXAgb253YXJkcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00368190-kdrnchrlht-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAyMiBTZXAgb253YXJkcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00368190-kdrnchrlht-portrait.jpg",
     name: "Naveen Richard Live: Baat Karo Mere Sath",
     languages: "English",
     catagory: "Comedy | English | 16yrs + | 1hr 15mins",
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCA0IE5vdg%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00368222-rhbzbfbbgx-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCA0IE5vdg%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00368222-rhbzbfbbgx-portrait.jpg",
     name: "Prashasti Singh - Man of the House (Stand Up Tour)",
     languages: "Hindi",
     catagory: "Comedy | Hindi | 16yrs + | 1hr",
     price: 499,
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAyNyBPY3Qgb253YXJkcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:oi-discovery-catalog@@icons@@bundle-icon-shadow-4x.png,ox-15,oy-15,ow-50:q-80/et00340434-wchjaxbkkc-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAyNyBPY3Qgb253YXJkcw%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:oi-discovery-catalog@@icons@@bundle-icon-shadow-4x.png,ox-15,oy-15,ow-50:q-80/et00340434-wchjaxbkkc-portrait.jpg",
     languages: "Gujarati",
     name: "Jati Rehje - Gujarati Stand-up Comedy",
     catagory: "Comedy | Gujarati, English | 18yrs + | 1hr 30mins",
     price: 249,
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAxIFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00366687-jwlzvrrqfd-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAxIFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00366687-jwlzvrrqfd-portrait.jpg",
     name: "PLAY 'N' LEARN VR Mall Chennai",
     type: "kids",
     languages: "Hindi",
@@ -162,7 +163,7 @@ const array1 = [
     price: 700,
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCA5IFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00355836-akhgjdpgmm-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCA5IFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00355836-akhgjdpgmm-portrait.jpg",
     name: "Blind Dating 30+ - Florican",
     catagory: "Dating | English, Hindi | 1hr",
     languages: "Hindi",
@@ -170,7 +171,7 @@ const array1 = [
     price: 299,
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCA5IFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00359035-cggedcjmfh-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCA5IFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00359035-cggedcjmfh-portrait.jpg",
     name: "Art Summer Camp - Paint the SpiderMan",
     catagory: "Comedy | English | 12yrs + | 1hr 30mins",
     price: 399,
@@ -178,7 +179,7 @@ const array1 = [
     languages: "Bengali",
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAzIE5vdg%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00368259-nzuznrnbtt-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-RnJpLCAzIE5vdg%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00368259-nzuznrnbtt-portrait.jpg",
     name: "Madras Mixtape by Barnaby Junction",
     languages: "multilanguage",
     catagory: "Indie | Multi Language | 5yrs + | 1hr 30mins",
@@ -186,14 +187,14 @@ const array1 = [
     type: "onlinestreaming",
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-TW9uLCA0IFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00317292-smfhyhlzjw-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-TW9uLCA0IFNlcCBvbndhcmRz,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00317292-smfhyhlzjw-portrait.jpg",
     name: "Mastering Basics Of Photography",
     languages: "Telugu",
     catagory: "Photography | English, Hindi, Telugu | 12yrs + | 3hrs",
     price: 4000,
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAzMCBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00360743-xxczztempp-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U2F0LCAzMCBTZXA%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00360743-xxczztempp-portrait.jpg",
     name: "Ani X Con",
     languages: "Tamil",
     type: "exhibitions",
@@ -201,7 +202,7 @@ const array1 = [
     price: 1000,
   },
   {
-    img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAzIFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00367329-dbpmubnvlk-portrait.jpg",
+    // img: "https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:ote-U3VuLCAzIFNlcA%3D%3D,ots-29,otc-FFFFFF,oy-612,ox-24:q-80/et00367329-dbpmubnvlk-portrait.jpg",
     name: "Dance Dance",
     languages: "Tamil",
     type: "performances",
@@ -221,8 +222,6 @@ const langArray = [
   "Gujarati",
   "multilanguages",
 ];
-
-
 
 // const array1 = [
 //   {
@@ -537,7 +536,7 @@ function Events() {
         <div className="div4th-right">
           {newEvelanguage.map((index) => {
             return (
-              <div className="right-flex">
+              <div className="right-flex" key={nanoid()}>
                 <img
                   style={{ height: "300px", borderRadius: "10px" }}
                   src={index.img}

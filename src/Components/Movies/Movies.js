@@ -2,6 +2,7 @@ import React from "react";
 
 import "./Movies.css";
 import { Link } from "react-router-dom";
+import { nanoid } from "nanoid";
 
 const MoviesData = [
   {
@@ -128,9 +129,9 @@ function Movies() {
     <div className="bookmyshow">
       {MoviesData.map((x) => {
         return (
-          <Link to={x.route}>
+          <Link to={x.route} key={nanoid()}>
             <div>
-              <img src={x.imageLink} alt="" />
+              {/* <img src={x.imageLink} alt="" /> */}
               <h2>{x.title}</h2>
               <p>{x.certificate}</p>
               <p>{x.languages}</p>

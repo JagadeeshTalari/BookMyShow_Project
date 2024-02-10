@@ -58,7 +58,7 @@ function Premiere() {
         {everyfriday.map((x) => {
           return (
             <div className="preimg" key={nanoid()}>
-              <img src={x.imglink} alt="" />
+              {/* <img src={x.imglink} alt="" /> */}
               <h3>{x.name}</h3>
               <p>{x.language}</p>
             </div>

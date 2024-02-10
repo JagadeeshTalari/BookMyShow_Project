@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Stream.css";
 const picture = [
-  "https://palacenova.com.au/media/Festivals/French2023/ONEFINEMORNING_landscape_web.jpg",
+  // "https://palacenova.com.au/media/Festivals/French2023/ONEFINEMORNING_landscape_web.jpg",
   "https://images7.alphacoders.com/130/1302009.jpg",
   "https://wallpaperaccess.com/full/9140013.jpg",
   "https://wallpapercave.com/dwp1x/wp11971175.jpg",
@@ -46,11 +46,11 @@ function Stream() {
       ))} */}
       <div id="imagecontainer">
         <button id="btn1" onClick={change}>
-          <i class="fa-solid fa-arrow-left"></i>
+          <i className="fa-solid fa-arrow-left"></i>
         </button>
         <img id="imga" src={picture[firstcontainerimg]} alt="" />
         <button id="btn2" onClick={change}>
-          <i class="fa-solid fa-arrow-right"></i>
+          <i className="fa-solid fa-arrow-right"></i>
         </button>
       </div>
       <div id="container2">

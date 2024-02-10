@@ -1,6 +1,7 @@
 import React from "react";
 import "./ICC.css";
 import ICC2 from "./ICC2";
+import { nanoid } from "nanoid";
 // import Logo from "./Header";
 
 const worldCup = [
@@ -93,7 +94,7 @@ function ICC() {
       <div className="mainimg-card">
         {worldCup.map((x) => {
           return (
-            <div>
+            <div key={nanoid()}>
               <div className="imageCard">
                 <img src={x.imageLink} alt={x.title} />
               </div>

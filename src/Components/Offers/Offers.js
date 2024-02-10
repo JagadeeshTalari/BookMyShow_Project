@@ -5,6 +5,7 @@ import Offers3 from "./Offers3";
 import Offers4 from "./Offers4";
 import Offers5 from "./Offers5";
 import "./Offers.css";
+import { nanoid } from "nanoid";
 
 // offersList1===========================================
 const OffersList1 = [
@@ -184,6 +185,7 @@ function Offers() {
         {OffersList1.map((item) => {
           return (
             <Offers1
+              key={nanoid()}
               imgLink={item.imgLink}
               para1={item.para1}
               para2={item.para2}
@@ -196,6 +198,7 @@ function Offers() {
         {OffersList2.map((item) => {
           return (
             <Offers2
+              key={nanoid()}
               imgLink={item.imgLink}
               para1={item.para1}
               para2={item.para2}
@@ -208,6 +211,7 @@ function Offers() {
         {OffersList3.map((item) => {
           return (
             <Offers3
+              key={nanoid()}
               imgLink={item.imgLink}
               para1={item.para1}
               para2={item.para2}
@@ -220,6 +224,7 @@ function Offers() {
         {OffersList4.map((item) => {
           return (
             <Offers4
+              key={nanoid()}
               imgLink={item.imgLink}
               para1={item.para1}
               para2={item.para2}
@@ -232,6 +237,7 @@ function Offers() {
         {OffersList5.map((item) => {
           return (
             <Offers5
+              key={nanoid()}
               imgLink={item.imgLink}
               para1={item.para1}
               para2={item.para2}

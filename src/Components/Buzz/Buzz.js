@@ -1,5 +1,6 @@
 import React from "react";
 import "./Buzz.css";
+import { nanoid } from "nanoid";
 
 const BuzzData = [
   {
@@ -181,7 +182,7 @@ const Buzz = () => {
     <div className="BuzzItem">
       {BuzzData.map((x) => {
         return (
-          <div className="BuzzItem_box">
+          <div className="BuzzItem_box" key={nanoid()}>
             <div className="image-bx">
               <img src={x.image} alt="" />
             </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Corporate.css";
+import { nanoid } from "nanoid";
 function Corporate() {
   let images = [
     "https://in.bmscdn.com/webin/corporate/hp-logo.png",
@@ -30,7 +31,7 @@ function Corporate() {
         <ul style={{ listStyleType: "none" }}>
           {images.map((item) => {
             return (
-              <li>
+              <li key={nanoid()}>
                 <img src={item} alt="" />
               </li>
             );
@@ -40,7 +41,7 @@ function Corporate() {
       <div className="crp">
         {text.name.map((x) => {
           return (
-            <div>
+            <div key={nanoid()}>
               <h4>{x.item}</h4>
               <p>{x.item2}</p>
             </div>

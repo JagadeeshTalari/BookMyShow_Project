@@ -1,5 +1,6 @@
 import React from "react";
 import Description from "./ICCPageDescription";
+import { nanoid } from "nanoid";
 // import Header from "./Header";
 
 const matches = [
@@ -74,7 +75,7 @@ function ICC2() {
       <div className="mainimg-card">
         {matches.map((x, i) => {
           return (
-            <div>
+            <div key={nanoid()}>
               <div className="imageCard">
                 <img src={x.imageLink} alt={`imageCard${i}`} />
               </div>
