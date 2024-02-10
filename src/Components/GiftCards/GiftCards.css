@@ -1,0 +1,25 @@
+.f-picture p {
+  color: gray;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+}
+.f-row {
+  margin: 25px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.giftCardBtns {
+  width: 80px;
+  padding: 5px 12px;
+  border-radius: 10px;
+  border: 1px solid grey;
+}
+
+.giftCardBtns:hover,
+.giftBtnActive {
+  background-color: red;
+  color: white;
+  border: 1px solid transparent;
+}
